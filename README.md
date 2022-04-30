@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Cущности:
+1. Вопрос
+2. Тест
+3. Пользователь
+4. Администратор
