@@ -1,12 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# # This file should contain all the record creation needed to seed the database with its default values.
+# # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
+# #
+# # Examples:
+# #
+# #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+# #   Character.create(name: 'Luke', movie: movies.first)
 
-User.destroy_all
+
 users = User.create([
   {login: 'Cozy', password_digest: 'xVA7f%'},
   {login: 'Sprout', password_digest: '9iqX^J'},
@@ -15,47 +15,37 @@ users = User.create([
   {login: 'Filter', password_digest: 'Ws^MH4'}
 ])
 
-p 'Пользователи созданы'
 
-Category.destroy_all
-categories = Category.create([
-  {title:'Информатика'},
-  {title:'Логика'},
-  {title:'Финансы'}
-])
-p 'Категории созданы'
-
-
-tests = Test.create([
+tests = Test.create!([
   {
   title: 'Основные законы логики',
   level: 0, 
-  category_id: Category.find_by(title: 'Логика').id,
-  author_id: User.find_by(login: 'Cozy').id,
+  category_id: Category.find_or_create_by!(title: 'Логика').id,
+  author_id: User.find_by(login: 'Cozy').id
   },
 
   {
   title: 'Основы HTML',
   level: 1, 
-  category_id: Category.find_by(title: 'Информатика').id,
-  author_id: User.find_by(login: 'Sprout').id,
+  category_id: Category.find_or_create_by!(title: 'Информатика').id,
+  author_id: User.find_by(login: 'Sprout').id
   },
 
   {
-  title: 'Финансы',
+  title: 'Новый тест',
   level: 2, 
-  category_id: Category.find_by(title: 'Финансы').id,
+  category_id: Category.find_or_create_by!(title: 'Новая категория').id,
   author_id: User.find_by(login: 'Crying').id
   }
   
 ])
 
-questions = Question.create(
+questions = Question.create!(
     body: 'Истинность мысли по содержанию:',
     test_id: Test.find_by(title: 'Основные законы логики').id,
 )
 
-answers = Answer.create([
+answers = Answer.create!([
   {body: 'актуальность информации, содержащейся в ней',
   question_id: Question.find_by(body: 'Истинность мысли по содержанию:').id
   },
@@ -74,12 +64,12 @@ answers = Answer.create([
   },
 ])
 
-questions = Question.create(
+questions = Question.create!(
   body: 'Основная ошибка, возникающая при нарушении закона тождества — …',
   test_id: Test.find_by(title: 'Основные законы логики').id,
 )
 
-answers = Answer.create([
+answers = Answer.create!([
   {body: 'Подмена понятия',
   question_id: Question.find_by(body: 'Основная ошибка, возникающая при нарушении закона тождества — …').id,
   correct: true
@@ -94,12 +84,12 @@ answers = Answer.create([
   }
 ])
 
-questions = Question.create(
+questions = Question.create!(
   body: 'Согласно закону тождества всякая мысль в процессе рассуждения …',
   test_id: Test.find_by(title: 'Основные законы логики').id,
 )
 
-answers = Answer.create([
+answers = Answer.create!([
   {body: 'должна быть тождественна самой себе',
   question_id: Question.find_by(body: 'Согласно закону тождества всякая мысль в процессе рассуждения …').id,
   correct: true
@@ -118,9 +108,16 @@ answers = Answer.create([
   }
 ])
 
-records = Record.create([
+records = Record.create!([
   {user_id: 1, test_id: 1},
   {user_id: 2, test_id: 2},
   {user_id: 1, test_id: 2},
   {user_id: 1, test_id: 3}
 ])
+
+Test.create!(
+  title: 'Тест',
+  level: 5, 
+  category_id: Category.find_by(title: 'Логика').id,
+  author_id: User.find_by(login: 'Cozy').id
+)
