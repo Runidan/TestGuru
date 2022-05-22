@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RemoveNameFromTests < ActiveRecord::Migration[6.1]
   def change
     remove_index :tests, :user_id
