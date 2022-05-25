@@ -42,17 +42,17 @@ question = Question.create!(
 
 Answer.create!([
                  { body: 'актуальность информации, содержащейся в ней',
-                   question: },
+                   question: question },
 
                  { body: 'соответствие её действительности',
-                   question:,
+                   question: question,
                    correct: true },
 
                  { body: 'интерпретация действительности',
-                   question: },
+                   question: question },
 
                  { body: 'максимальная приближенность её к действительности',
-                   question: }
+                   question: question }
                ])
 
 question = Question.create!(
@@ -62,14 +62,14 @@ question = Question.create!(
 
 Answer.create!([
                  { body: 'Подмена понятия',
-                   question:,
+                   question: question,
                    correct: true },
 
                  { body: 'Паралогизм',
-                   question: },
+                   question: question },
 
                  { body: 'Тавтология',
-                   question: }
+                   question: question }
                ])
 
 question = Question.create!(
@@ -79,17 +79,17 @@ question = Question.create!(
 
 Answer.create!([
                  { body: 'должна быть тождественна самой себе',
-                   question:,
+                   question: question,
                    correct: true },
 
                  { body: 'должна продолжать предыдущую',
-                   question: },
+                   question: question },
 
                  { body: 'должна быть обоснована',
-                   question: },
+                   question: question },
 
                  { body: 'не должна противоречить предыдущей',
-                   question: }
+                   question: question }
                ])
 users[0].tests.push(tests[0])
 users[1].tests.push(tests[1])
