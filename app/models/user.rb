@@ -8,6 +8,6 @@ class User < ApplicationRecord
   has_many :tests, through: :tests_users, dependent: :destroy
 
   def get_tests_from_level(level)
-    tests.where(level:)
+    tests.where(level: level)
   end
 end
