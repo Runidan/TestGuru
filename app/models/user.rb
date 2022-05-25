@@ -3,11 +3,11 @@
 class User < ApplicationRecord
   has_secure_password
 
-  has_many :tests
+  has_many :made_tests, class_name: 'Test', foreign_key: :author_id
+  has_many :tests_users
+  has_many :tests, through: :tests_users
 
-  def tests(level)
-    Test
-      .joins('INNER JOIN records ON records.test_id = tests.id')
-      .where(records: { user_id: id }, level:)
+  def get_tests_from_level(level)
+    tests.where(level:)
   end
 end

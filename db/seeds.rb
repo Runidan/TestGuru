@@ -91,10 +91,6 @@ Answer.create!([
                  { body: 'не должна противоречить предыдущей',
                    question_id: question.id }
                ])
-
-Record.create!([
-                 { user_id: 1, test_id: 1 },
-                 { user_id: 2, test_id: 2 },
-                 { user_id: 1, test_id: 2 },
-                 { user_id: 1, test_id: 3 }
-               ])
+users[0].tests.push(tests[0])
+users[1].tests.push(tests[1])
+users[0].tests.push(tests[1])
