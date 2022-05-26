@@ -23,78 +23,74 @@ category = Category.create!([
 tests = Test.create!([
                        { title: 'Основные законы логики',
                          level: 0,
-                         category_id: category[0].id,
-                         author_id: users[0].id },
+                         category: category[0],
+                         author: users[0] },
                        { title: 'Основы HTML',
                          level: 1,
-                         category_id: category[1].id,
-                         author_id: users[0].id },
+                         category: category[1],
+                         author: users[0] },
                        { title: 'Новый тест',
                          level: 2,
-                         category_id: category[2].id,
-                         author_id: users[0].id }
+                         category: category[2],
+                         author: users[0] }
                      ])
 
 question = Question.create!(
   body: 'Истинность мысли по содержанию:',
-  test_id: tests[0].id
+  test: tests[0]
 )
 
 Answer.create!([
                  { body: 'актуальность информации, содержащейся в ней',
-                   question_id: question.id },
+                   question: question },
 
                  { body: 'соответствие её действительности',
-                   question_id: question.id,
+                   question: question,
                    correct: true },
 
                  { body: 'интерпретация действительности',
-                   question_id: question.id },
+                   question: question },
 
                  { body: 'максимальная приближенность её к действительности',
-                   question_id: question.id }
+                   question: question }
                ])
 
 question = Question.create!(
   body: 'Основная ошибка, возникающая при нарушении закона тождества — …',
-  test_id: tests[0].id
+  test: tests[0]
 )
 
 Answer.create!([
                  { body: 'Подмена понятия',
-                   question_id: question.id,
+                   question: question,
                    correct: true },
 
                  { body: 'Паралогизм',
-                   question_id: question.id },
+                   question: question },
 
                  { body: 'Тавтология',
-                   question_id: question.id }
+                   question: question }
                ])
 
 question = Question.create!(
   body: 'Согласно закону тождества всякая мысль в процессе рассуждения …',
-  test_id: tests[0].id
+  test: tests[0]
 )
 
 Answer.create!([
                  { body: 'должна быть тождественна самой себе',
-                   question_id: question.id,
+                   question: question,
                    correct: true },
 
                  { body: 'должна продолжать предыдущую',
-                   question_id: question.id },
+                   question: question },
 
                  { body: 'должна быть обоснована',
-                   question_id: question.id },
+                   question: question },
 
                  { body: 'не должна противоречить предыдущей',
-                   question_id: question.id }
+                   question: question }
                ])
-
-Record.create!([
-                 { user_id: 1, test_id: 1 },
-                 { user_id: 2, test_id: 2 },
-                 { user_id: 1, test_id: 2 },
-                 { user_id: 1, test_id: 3 }
-               ])
+users[0].tests.push(tests[0])
+users[1].tests.push(tests[1])
+users[0].tests.push(tests[1])

@@ -3,9 +3,11 @@
 class User < ApplicationRecord
   has_secure_password
 
-  def tests(level)
-    Test
-      .joins('INNER JOIN records ON records.test_id = tests.id')
-      .where(records: { user_id: id }, level:)
+  has_many :made_tests, class_name: 'Test', foreign_key: :author_id, dependent: :destroy
+  has_many :tests_users, dependent: :destroy
+  has_many :tests, through: :tests_users, dependent: :destroy
+
+  def get_tests_from_level(level)
+    tests.where(level: level)
   end
 end
