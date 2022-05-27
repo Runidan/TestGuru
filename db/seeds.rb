@@ -22,7 +22,7 @@ category = Category.create!([
 
 tests = Test.create!([
                        { title: 'Основные законы логики',
-                         level: 0,
+                         level: 1,
                          category: category[0],
                          author: users[0] },
                        { title: 'Основы HTML',
