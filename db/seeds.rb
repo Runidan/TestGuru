@@ -9,11 +9,11 @@
 # #   Character.create(name: 'Luke', movie: movies.first)
 
 users = User.create!([
-                       { login: 'Cozy', password_digest: 'xVA7f%' },
-                       { login: 'Sprout', password_digest: '9iqX^J' },
-                       { login: 'Unwrapped', password_digest: 'i$^Yk2' },
-                       { login: 'Crying', password_digest: 'jmU3W$' },
-                       { login: 'Filter', password_digest: 'Ws^MH4' }
+                       { login: 'Cozy', password_digest: 'xVA7f%', email: 'sdf@sdf.ru' },
+                       { login: 'Sprout', password_digest: '9iqX^J', email: 'dgjr@sdf.ru' },
+                       { login: 'Unwrapped', password_digest: 'i$^Yk2', email: 'sfhhfsg@sdf.ru' },
+                       { login: 'Crying', password_digest: 'jmU3W$', email: 'ssd@sdf.ru' },
+                       { login: 'Filter', password_digest: 'Ws^MH4', email: 'kyuf@sdf.ru' }
                      ])
 
 category = Category.create!([
@@ -42,17 +42,17 @@ question = Question.create!(
 
 Answer.create!([
                  { body: 'актуальность информации, содержащейся в ней',
-                   question: question },
+                   question: },
 
                  { body: 'соответствие её действительности',
-                   question: question,
+                   question:,
                    correct: true },
 
                  { body: 'интерпретация действительности',
-                   question: question },
+                   question: },
 
                  { body: 'максимальная приближенность её к действительности',
-                   question: question }
+                   question: }
                ])
 
 question = Question.create!(
@@ -62,14 +62,14 @@ question = Question.create!(
 
 Answer.create!([
                  { body: 'Подмена понятия',
-                   question: question,
+                   question:,
                    correct: true },
 
                  { body: 'Паралогизм',
-                   question: question },
+                   question: },
 
                  { body: 'Тавтология',
-                   question: question }
+                   question: }
                ])
 
 question = Question.create!(
@@ -79,17 +79,17 @@ question = Question.create!(
 
 Answer.create!([
                  { body: 'должна быть тождественна самой себе',
-                   question: question,
+                   question:,
                    correct: true },
 
                  { body: 'должна продолжать предыдущую',
-                   question: question },
+                   question: },
 
                  { body: 'должна быть обоснована',
-                   question: question },
+                   question: },
 
                  { body: 'не должна противоречить предыдущей',
-                   question: question }
+                   question: }
                ])
 users[0].tests.push(tests[0])
 users[1].tests.push(tests[1])
