@@ -6,7 +6,7 @@ class Answer < ApplicationRecord
   belongs_to :question
 
   validates :body, presence: true
-  validate :valid_amount
+  validate :valid_amount, on: [:save, :save!, :create, :create!, :valid?, :invalid?]
 
   def valid_amount
     errors.add(:amount_answers, "Amount of anwers to one question must be less 5") if self.question.answers.count > 5
