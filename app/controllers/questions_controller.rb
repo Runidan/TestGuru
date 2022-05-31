@@ -1,32 +1,34 @@
-class QuestionsController < ApplicationController
+# frozen_string_literal: true
 
-  before_action :get_test
+class QuestionsController < ApplicationController
+  before_action :get_test, only: [:index]
+  before_action :get_question, only: [:show]
 
   def index
-    render inline: "<ul><% @test.questions.each do |question| %><li><%= question.body %></li><% end %></ul>"
-
+    render inline: '<ul><% @test.questions.each do |question| %><li><%= question.body %></li><% end %></ul>'
   end
 
   def show
+    render inline: '<p><%= @question.body %></p>'
   end
 
-  def new
-  end
+  def new; end
 
-  def edit
-  end
+  def edit; end
 
-  def create
-  end
+  def create; end
 
-  def update
-  end
+  def update; end
 
-  def destroy
-  end
+  def destroy; end
 
   private
+
   def get_test
     @test = Test.find(params[:test_id])
+  end
+
+  def get_question
+    @question = Question.find(params[:id])
   end
 end
