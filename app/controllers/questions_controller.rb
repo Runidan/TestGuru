@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class QuestionsController < ApplicationController
-  before_action :get_test, only: [:index]
+  before_action :get_test, only: [:index, :show]
   before_action :get_question, only: [:show]
 
   def index
@@ -12,7 +12,9 @@ class QuestionsController < ApplicationController
     render inline: '<p><%= @question.body %></p>'
   end
 
-  def new; end
+  def new
+    
+  end
 
   def edit; end
 
