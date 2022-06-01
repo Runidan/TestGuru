@@ -1,1 +1,13 @@
-<h1>Create new test</h1>
+<h1>Добавление вопроса к тесту: <%= @test.title %></h1>
+
+<form action="/tests/<%= @test.id %>/questions" method="post">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <input name="question[test_id]" value="<%= @test.id %>" type="hidden">
+  <p>
+    <%# <input type="text" name="question[body]" id="question"> %>
+    <textarea rows="4" cols="50" name="question[body]" placeholder="Введите текст вопроса"></textarea>
+  </p><br>
+
+<input type="submit" value="Добавить">
+  
+</form>
