@@ -17,10 +17,11 @@ class QuestionsController < ApplicationController
   def new; end
 
   def create
-    if @test.questions.create(question_params)
-      redirect_to test_questions_path
+    @question = @test.questions.new(question_params)
+    if @question.save
+      redirect_to test_questions_path(@test)
     else
-      redirect_to new_test_question_path
+      render json: @question
     end
   end
 
