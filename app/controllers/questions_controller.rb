@@ -21,7 +21,7 @@ class QuestionsController < ApplicationController
     if @question.save
       redirect_to test_questions_path(@test)
     else
-      render json: @question
+      render plain: @question.inspect
     end
   end
 
