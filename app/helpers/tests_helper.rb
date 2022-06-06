@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 module TestsHelper
-
   def test_level(test)
     case test.level
     when (0..1)
