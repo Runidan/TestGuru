@@ -7,7 +7,8 @@ class QuestionsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def index
-    render inline: '<ul><% @test.questions.each do |question| %><li><%= question.body %></li><% end %></ul>'
+    @test = Test.find(params[:test_id])
+    redirect_to test_path(@test)
   end
 
   def show
