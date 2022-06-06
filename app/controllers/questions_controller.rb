@@ -15,14 +15,17 @@ class QuestionsController < ApplicationController
     render inline: '<p><%= @question.body %></p>'
   end
 
-  def new; end
+  def new
+    @test = Test.find(params[:test_id])
+    @question = Question.new
+  end
 
   def create
     @question = @test.questions.new(question_params)
     if @question.save
-      redirect_to test_questions_path(@test)
+      redirect_to test_path(@test)
     else
-      render plain: @question.inspect
+      render :new
     end
   end
 
