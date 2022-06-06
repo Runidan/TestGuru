@@ -12,6 +12,10 @@ class TestsController < ApplicationController
     @test = Test.new
   end
 
+  def edit
+    @test = Test.find(params[:id])
+  end
+
   def create
     @test = Test.new test_params 
 
@@ -20,6 +24,18 @@ class TestsController < ApplicationController
 
     else
       render :new
+    end
+
+  end
+
+  def update
+    @test = Test.find(params[id])
+
+    if @test.save
+      redirect_to @test
+
+    else
+      render :edit
     end
 
   end

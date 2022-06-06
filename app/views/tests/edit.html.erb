@@ -1,5 +1,3 @@
-<h1>Редактирование теста</h1>
-<%= form_with model: @test do |form| %>
-  <%= form.label :title, "Название" %>
-  <%= form.text_field :title %>
-<% end %>
+<h1>Редактировать тест: <%= @test.title %></h1>
+
+<%= render 'form' %>
