@@ -1,5 +1,6 @@
-class TestsController < ApplicationController
+# frozen_string_literal: true
 
+class TestsController < ApplicationController
   def index
     @tests = Test.all
   end
@@ -17,7 +18,7 @@ class TestsController < ApplicationController
   end
 
   def create
-    @test = Test.new test_params 
+    @test = Test.new test_params
 
     if @test.save
       redirect_to @test
@@ -25,7 +26,6 @@ class TestsController < ApplicationController
     else
       render :new
     end
-
   end
 
   def update
@@ -37,7 +37,13 @@ class TestsController < ApplicationController
     else
       render :edit
     end
+  end
 
+  def destroy
+    @test = Test.find(params[:id])
+
+    @test.destroy
+    redirect_to tests_path
   end
 
   private
@@ -45,5 +51,4 @@ class TestsController < ApplicationController
   def test_params
     params.require(:test).permit(:title, :level, :category_id, :author_id)
   end
-
 end

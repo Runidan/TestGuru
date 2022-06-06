@@ -1,9 +1,12 @@
 <% if @tests.present?%>
+
+<%= link_to "New test", 'tests/new' %>
 <h2>Существующие тесты</h2>
   <table>
     <tr>
       <th>Тесты</th>
       <th>Уровень</th>
+      <th colspan = 3>Actions</th>
     </tr>
     <%= render @tests %>
   </table>
