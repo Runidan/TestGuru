@@ -1,0 +1,9 @@
+<% if @tests.present?%>
+<h2>Существующие тесты</h2>
+
+  <% @tests.each do|test| %>
+    <p><%= test.title %></p>
+  <% end %>
+<% else %>
+  <p>Тесты отсуствуют</p>
+<% end %>

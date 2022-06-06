@@ -1,2 +1,5 @@
-<h1>Tests#edit</h1>
-<p>Find me in app/views/tests/edit.html.erb</p>
+<h1>Редактирование теста</h1>
+<%= form_with model: @test do |form| %>
+  <%= form.label :title, "Название" %>
+  <%= form.text_field :title %>
+<% end %>
