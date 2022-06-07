@@ -1,33 +1,39 @@
 # frozen_string_literal: true
 
 class QuestionsController < ApplicationController
-  before_action :get_test, only: %i[index new create]
-  before_action :get_question, only: %i[show destroy]
+  before_action :get_test, only: %i[new create]
+  before_action :get_question, only: %i[show edit destroy update]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  def index
-    render inline: '<ul><% @test.questions.each do |question| %><li><%= question.body %></li><% end %></ul>'
+  def show; end
+
+  def new
+    @question = Question.new
   end
 
-  def show
-    render inline: '<p><%= @question.body %></p>'
-  end
-
-  def new; end
+  def edit; end
 
   def create
     @question = @test.questions.new(question_params)
     if @question.save
-      redirect_to test_questions_path(@test)
+      redirect_to test_path(@test)
     else
-      render plain: @question.inspect
+      render :new
+    end
+  end
+
+  def update
+    if @question.update(question_params)
+      redirect_to test_path(@question.test)
+    else
+      render :edit
     end
   end
 
   def destroy
     @question.destroy
-    redirect_to test_questions_path(@question.test_id)
+    redirect_to test_path(@question.test_id)
   end
 
   private
