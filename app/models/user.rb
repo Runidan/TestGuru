@@ -3,9 +3,10 @@
 class User < ApplicationRecord
   has_secure_password
 
+  has_many :test_passages, dependent: :destroy
+  has_many :test, through: :test_passages, dependent: :destroy
   has_many :made_tests, class_name: 'Test', foreign_key: :author_id, dependent: :destroy
-  has_many :tests_users, dependent: :destroy
-  has_many :tests, through: :tests_users, dependent: :destroy
+
 
   validates :login, :email, presence: true
 
