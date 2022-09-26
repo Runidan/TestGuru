@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2022_09_22_115912) do
     t.string "title", limit: 50, null: false
     t.integer "level", default: 0, null: false
     t.integer "category_id", null: false
-    t.da                                     cmb tetime "created_at", precision: 6, null: false
+    t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "author_id"
     t.index ["author_id"], name: "index_tests_on_author_id"
@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(version: 2022_09_22_115912) do
 
   add_foreign_key "answers", "questions"
   add_foreign_key "questions", "tests"
-  add_foreign_key "test_passages", "current_questions"
+  add_foreign_key "test_passages", "questions", column: "current_question_id"
   add_foreign_key "test_passages", "tests"
   add_foreign_key "test_passages", "users"
   add_foreign_key "tests", "categories"
