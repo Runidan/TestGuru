@@ -36,9 +36,9 @@ ActiveRecord::Schema.define(version: 2022_09_22_115912) do
   end
 
   create_table "test_passages", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "test_id", null: false
-    t.integer "current_question_id", null: false
+    t.integer "user_id"
+    t.integer "test_id"
+    t.integer "current_question_id"
     t.integer "correct_questions", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2022_09_22_115912) do
     t.string "title", limit: 50, null: false
     t.integer "level", default: 0, null: false
     t.integer "category_id", null: false
-    t.datetime "created_at", precision: 6, null: false
+    t.da                                     cmb tetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "author_id"
     t.index ["author_id"], name: "index_tests_on_author_id"

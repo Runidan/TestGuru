@@ -13,4 +13,8 @@ class User < ApplicationRecord
   def get_tests_from_level(level)
     tests.by_level(level)
   end
+
+  def test_passage(test)
+    test_passages.order(id: :desc).find_by(test_id: test.id)
+  end
 end

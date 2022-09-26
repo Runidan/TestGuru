@@ -35,62 +35,63 @@ tests = Test.create!([
                          author: users[0] }
                      ])
 
-question = Question.create!(
-  body: 'Истинность мысли по содержанию:',
-  test: tests[0]
-)
+# question = Question.create!(
+#   body: 'Истинность мысли по содержанию:',
+#   test: tests[0]
+# )   
 
-Answer.create!([
-                 { body: 'актуальность информации, содержащейся в ней',
-                   question: },
+# Answer.create!([
+#                  { body: 'актуальность информации, содержащейся в ней',
+#                    question: },
 
-                 { body: 'соответствие её действительности',
-                   question:,
-                   correct: true },
+#                  { body: 'соответствие её действительности',
+#                    question:,
+#                    correct: true },
 
-                 { body: 'интерпретация действительности',
-                   question: },
+#                  { body: 'интерпретация действительности',
+#                    question: },
 
-                 { body: 'максимальная приближенность её к действительности',
-                   question: }
-               ])
+#                  { body: 'максимальная приближенность её к действительности',
+#                    question: }
+#                ])
 
-question = Question.create!(
-  body: 'Основная ошибка, возникающая при нарушении закона тождества — …',
-  test: tests[0]
-)
+# question = Question.create!(
+#   body: 'Основная ошибка, возникающая при нарушении закона тождества — …',
+#   test: tests[0]
+# )
 
-Answer.create!([
-                 { body: 'Подмена понятия',
-                   question:,
-                   correct: true },
+# Answer.create!([
+#                  { body: 'Подмена понятия',
+#                    question:,
+#                    correct: true },
 
-                 { body: 'Паралогизм',
-                   question: },
+#                  { body: 'Паралогизм',
+#                    question: },
 
-                 { body: 'Тавтология',
-                   question: }
-               ])
+#                  { body: 'Тавтология',
+#                    question: }
+#                ])
 
-question = Question.create!(
-  body: 'Согласно закону тождества всякая мысль в процессе рассуждения …',
-  test: tests[0]
-)
+# question = Question.create!(
+#   body: 'Согласно закону тождества всякая мысль в процессе рассуждения …',
+#   test: tests[0]
+# )
 
-Answer.create!([
-                 { body: 'должна быть тождественна самой себе',
-                   question:,
-                   correct: true },
+# Answer.create!([
+#                  { body: 'должна быть тождественна самой себе',
+#                    question:,
+#                    correct: true },
 
-                 { body: 'должна продолжать предыдущую',
-                   question: },
+#                  { body: 'должна продолжать предыдущую',
+#                    question: },
 
-                 { body: 'должна быть обоснована',
-                   question: },
+#                  { body: 'должна быть обоснована',
+#                    question: },
 
-                 { body: 'не должна противоречить предыдущей',
-                   question: }
-               ])
-users[0].tests.push(tests[0])
-users[1].tests.push(tests[1])
-users[0].tests.push(tests[1])
+#                  { body: 'не должна противоречить предыдущей',
+#                    question: }
+#                ])
+# users[0].tests.push(tests[0])
+# users[1].tests.push(tests[1])
+# users[0].tests.push(tests[1])
+  
