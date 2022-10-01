@@ -5,7 +5,6 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_question
 
-
   def completed?
     current_question.nil?
   end
