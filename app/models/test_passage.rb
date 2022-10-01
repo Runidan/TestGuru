@@ -20,7 +20,7 @@ class TestPassage < ApplicationRecord
   private
 
   def before_validation_set_question
-    return self.current_question = test.questions.first if test.present?
+    return self.current_question = test.questions.first if (test.present? && current_question.nil?)
     self.current_question = test.questions.order(:id).where('id > ?', current_question.id).first
   end
 
