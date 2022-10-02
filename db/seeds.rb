@@ -94,4 +94,3 @@ Answer.create!([
 users[0].tests.push(tests[0])
 users[1].tests.push(tests[1])
 users[0].tests.push(tests[1])
-  
