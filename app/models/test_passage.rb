@@ -5,6 +5,10 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_question
 
+  def success_rate
+    self.correct_questions / self.test.questions.count * 100
+  end
+
   def completed?
     current_question.nil?
   end
