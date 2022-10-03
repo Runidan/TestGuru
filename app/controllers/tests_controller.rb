@@ -61,5 +61,4 @@ class TestsController < ApplicationController
   def set_user
     @user = User.first
   end
-
 end

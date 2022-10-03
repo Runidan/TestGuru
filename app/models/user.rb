@@ -7,7 +7,6 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages, dependent: :destroy
   has_many :made_tests, class_name: 'Test', foreign_key: :author_id, dependent: :destroy
 
-
   validates :login, :email, presence: true
 
   def get_tests_from_level(level)

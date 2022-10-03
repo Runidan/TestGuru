@@ -38,7 +38,7 @@ tests = Test.create!([
 question = Question.create!(
   body: 'Истинность мысли по содержанию:',
   test: tests[0]
-)   
+)
 
 Answer.create!([
                  { body: 'актуальность информации, содержащейся в ней',
