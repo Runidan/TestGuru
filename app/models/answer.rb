@@ -11,6 +11,6 @@ class Answer < ApplicationRecord
   private
 
   def valid_amount
-    errors.add(:amount_answers, 'Amount of anwers to one question must be less 5') if question.answers.count > 5
+    errors.add(:amount_answers, 'Amount of anwers to one question must be less 5') if self.question.answers.count > 4
   end
 end
