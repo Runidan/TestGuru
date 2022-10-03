@@ -8,7 +8,7 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_question
 
   def success_rate
-    correct_questions / self.test.questions.count * 100
+    (correct_questions.to_f / self.test.questions.count * 100).round
   end
 
   def completed?
