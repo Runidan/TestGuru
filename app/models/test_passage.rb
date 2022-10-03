@@ -26,10 +26,16 @@ class TestPassage < ApplicationRecord
 
   private
 
-  def before_validation_set_question
-    return self.current_question = test.questions.first if test.present? && current_question.nil?
+  def question_number_in_test
+    if test.present? && current_question.nil?
+      test.questions.first
+    else
+      test.questions.order(:id).where('id > ?', current_question.id).first
+    end
+  end
 
-    self.current_question = test.questions.order(:id).where('id > ?', current_question.id).first
+  def before_validation_set_question
+    self.current_question = question_number_in_test
   end
 
   def correct_answer?(answer_ids)
