@@ -1,7 +1,7 @@
 <h1>The <%= @test_passage.test.title %> Test was completed!</h1>
 
 <p>
-  <% if @test_passage.success_rate >= 85 %>
+  <% if @test_passage.successful? %>
     <font color="green">You have successfully passed the test. Your result <%= @test_passage.success_rate %>%</font>
   <% else %>
     <font color="red">You didn't pass the test. Your result <%= @test_passage.success_rate %>%</font>

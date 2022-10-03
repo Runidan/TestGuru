@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class TestPassage < ApplicationRecord
+  SUCCESS_RATIO = 85
+
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
@@ -13,6 +15,10 @@ class TestPassage < ApplicationRecord
 
   def success_rate
     (correct_questions.to_f / self.test.questions.count * 100).round
+  end
+
+  def successful?
+    success_rate >= SUCCESS_RATIO
   end
 
   def completed?
