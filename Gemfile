@@ -58,5 +58,3 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'bcrypt', '>=3.1.17'
-
-# gem 'russian', '~> 0.6.0'
