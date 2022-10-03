@@ -7,6 +7,10 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_question
 
+  def question_number
+    self.test.questions.order(:id).where('id <= ?', self.current_question.id).count
+  end
+
   def success_rate
     (correct_questions.to_f / self.test.questions.count * 100).round
   end
