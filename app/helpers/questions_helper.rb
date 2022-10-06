@@ -2,8 +2,9 @@
 
 module QuestionsHelper
   def question_header(question)
-    return "Edit #{@question.test.title} Question" if question.persisted?
+    first_words = 'Create new'
+    first_words = 'Edit' if question.persisted?
 
-    "Create New #{@question.test.title} Question"
+    "#{first_words} question for #{question.test.title} test"
   end
 end
