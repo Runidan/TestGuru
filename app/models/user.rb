@@ -2,6 +2,9 @@
 require 'digest/sha1'
 
 class User < ApplicationRecord
+  attr_reader :password
+  attr_writer :password_confirmation
+
   has_secure_password
 
   has_many :test_passages, dependent: :destroy
@@ -20,6 +23,11 @@ class User < ApplicationRecord
 
   def authenticate(password_string)
     digest(password_string) == self.password_digest ? self : false
+  end
+
+  def password=(password_string)
+    @password = password_string
+    self.password_digest = digest(password_string)
   end
 
   private
