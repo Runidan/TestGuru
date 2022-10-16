@@ -11,10 +11,12 @@
   </head>
 
   <body>
-    <% if logged_in? %>
-      <p class="nav user">Welcome, <b><%= current_user.login %></b> Guru</p>
-    <% end %>
-    <%= yield %>
+    <%= render 'shared/menu' %>
+    <main class="container">
+      <%= flash_message(:alert) %>
+      <%= flash_message(:success) %>
+      <%= yield %>
+    </main>
     <%= render 'shared/footer' %>
   </body>
 </html>

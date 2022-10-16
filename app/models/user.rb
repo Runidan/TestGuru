@@ -11,6 +11,8 @@ class User < ApplicationRecord
 
   has_secure_password
 
+  validates :email, presence: true, uniqueness: true, 'valid_email_2/email': true
+
   def get_tests_from_level(level)
     tests.by_level(level)
   end
