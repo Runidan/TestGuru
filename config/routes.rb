@@ -9,10 +9,10 @@ Rails.application.routes.draw do
 
   get :singup, to: 'users#new'
   get :login, to: 'sessions#new'
-  
+
   resources :users, only: :create
   resource :session, only: %i[new create destroy]
-  
+
   resources :tests do
     resources :questions, shallow: true, except: :index do
       resources :answers, shallow: true, exept: :index

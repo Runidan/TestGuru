@@ -1,8 +1,8 @@
 # frozen_string_literal: true
+
 require 'digest/sha1'
 
 class User < ApplicationRecord
-
   include Auth
 
   has_many :test_passages, dependent: :destroy
