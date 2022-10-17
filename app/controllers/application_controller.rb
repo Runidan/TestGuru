@@ -26,9 +26,6 @@ class ApplicationController < ActionController::Base
 
   def after_login(user)
     session[:user_id] = user.id
-    path = cookies[:request_url]
-    path ||= root_path
-    redirect_to path, notice: "Welcome, #{current_user.login} Guru"
-    cookies.delete(:request_url)
+    redirect_to cookies.delete(:request_url) || root_path, notice: "Welcome, #{current_user.login} Guru"
   end
 end
