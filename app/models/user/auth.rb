@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module User
-  module Auth
+
+  module User::Auth
     extend ActiveSupport::Concern
 
     attr_reader :password
@@ -32,4 +32,4 @@ module User
       Digest::SHA1.hexdigest(string)
     end
   end
-end
+
