@@ -44,8 +44,7 @@ class TestsController < ApplicationController
   end
 
   def start
-    set_user
-    @current_user.tests.push(@test)
+    current_user.tests.push(@test)
     redirect_to @current_user.test_passage(@test)
   end
 
@@ -57,9 +56,5 @@ class TestsController < ApplicationController
 
   def get_test
     @test = Test.find(params[:id])
-  end
-
-  def set_user
-    @user = User.first
   end
 end
