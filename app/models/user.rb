@@ -3,7 +3,6 @@
 require 'digest/sha1'
 
 class User < ApplicationRecord
-  include Auth
 
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages, dependent: :destroy
@@ -11,7 +10,10 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  validates :email, presence: true, uniqueness: true, 'valid_email_2/email': true
+  validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
+  validates :login, presence: true, uniqueness: true
+  validates :password, presence: true, if: proc { |u| u.password_digest.blank? }
+  validates :password, confirmation: true
 
   def get_tests_from_level(level)
     tests.by_level(level)
