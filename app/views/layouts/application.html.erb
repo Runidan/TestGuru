@@ -11,7 +11,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'shared/menu' %>
+    <main class="container">
+      <%= flash_message(:alert) %>
+      <%= flash_message(:notice) %>
+      <%= yield %>
+    </main>
     <%= render 'shared/footer' %>
   </body>
 </html>
