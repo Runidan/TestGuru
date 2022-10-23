@@ -7,7 +7,7 @@
           </ul>
 
           <ul class="nav col-12 col-lg-auto mb-2 mb-md-0">
-            <% if logged_in? %>
+            <% if user_signed_in? %>
               <li><%= content_tag :span, current_user.login,  class: "nav-link px-2 text-white" %></li>
               <li><%= link_to 'Выйти', destroy_user_session_path, method: :delete, class: "nav-link px-2" %></li>
             <% else%>
