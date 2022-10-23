@@ -17,7 +17,6 @@ class User < ApplicationRecord
 
   validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :login, presence: true, uniqueness: true
-  # validates :password, presence: true, if: proc { |u| u.password_encrypted.blank? }
   validates :password, confirmation: true
 
   def get_tests_from_level(level)
