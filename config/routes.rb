@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   devise_for :users, path: :gurus, path_names: { sign_in: 'login', sign_out: 'logout' }
 
-  resources :tests do
+  resources :tests, only: :index do
     resources :questions, shallow: true, except: :index do
       resources :answers, shallow: true, exept: :index
     end
@@ -20,5 +20,9 @@ Rails.application.routes.draw do
     member do
       get :result
     end
+  end
+
+  namespace :admin do
+    resources :tests
   end
 end
