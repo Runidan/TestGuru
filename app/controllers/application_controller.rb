@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   def after_login(user)
     session[:user_id] = user.id
-    redirect_to cookies.delete(:request_url) || root_path, notice: "Welcome, #{current_user.login} Guru"
+    redirect_to cookies.delete(:request_url) || root_path, notice: "Welcome, #{current_user.first_name} Guru"
   end
 
   def configure_permitted_parameters
