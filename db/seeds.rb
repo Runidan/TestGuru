@@ -9,11 +9,11 @@
 # #   Character.create(name: 'Luke', movie: movies.first)
 
 users = User.create!([
-                       { login: 'Cozy', password_digest: 'xVA7f%', email: 'sdf@sdf.ru' },
-                       { login: 'Sprout', password_digest: '9iqX^J', email: 'dgjr@sdf.ru' },
-                       { login: 'Unwrapped', password_digest: 'i$^Yk2', email: 'sfhhfsg@sdf.ru' },
-                       { login: 'Crying', password_digest: 'jmU3W$', email: 'ssd@sdf.ru' },
-                       { login: 'Filter', password_digest: 'Ws^MH4', email: 'kyuf@sdf.ru' }
+                       { login: 'Cozy', password: 'xVA7f%', email: 'sdf@sdf.ru' },
+                       { login: 'Sprout', password: '9iqX^J', email: 'dgjr@sdf.ru' },
+                       { login: 'Unwrapped', password: 'i$^Yk2', email: 'sfhhfsg@sdf.ru' },
+                       { login: 'Crying', password: 'jmU3W$', email: 'ssd@sdf.ru' },
+                       { login: 'Filter', password: 'Ws^MH4', email: 'kyuf@sdf.ru' }
                      ])
 
 category = Category.create!([
