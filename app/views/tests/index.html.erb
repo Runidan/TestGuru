@@ -1,14 +1,14 @@
 <% if @tests.present?%>
 
-<h2>Существующие тесты</h2>
-  <table>
-    <tr>
-      <th>Тесты</th>
-      <th>Уровень</th>
-      <th>Actions</th>
-    </tr>
-    <%= render @tests %>
-  </table>
+  <h2><%= t('.header') %></h2>
+    <table>
+      <tr>
+        <th>Тесты</th>
+        <th>Уровень</th>
+        <th>Actions</th>
+      </tr>
+      <%= render @tests %>
+    </table>
 <% else %>
   <p>Тесты отсуствуют</p>
 <% end %>
