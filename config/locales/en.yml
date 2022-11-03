@@ -30,8 +30,38 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
-
   tests:
     index:
       header: "Tricky Tests"
+
+  helpers:
+    submit:
+      test:
+        create:  "Create test"
+        update:  "Update test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+
+  shared:
+    errors:
+      header: 
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+  
+  admin:
+    tests:
+      index:
+        header: "Tricky Tests"
+      create:
+        success: "Test was successfully created!"
+
+  test_passages:
+    result:
+      header: "The %{title} test was completed!!"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"

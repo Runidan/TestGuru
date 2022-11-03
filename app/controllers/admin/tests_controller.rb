@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Admin
-  class TestsController < Admin::BaseController
+
+  class Admin::TestsController < Admin::BaseController
     before_action :get_test, only: %i[show edit update destroy start]
 
     def index
@@ -22,7 +22,7 @@ module Admin
       @test = current_user.tests.build(test_params)
 
       if @test.save
-        redirect_to admin_test_path(@test)
+        redirect_to admin_test_path(@test), notice: t('.success')
 
       else
         render :new
@@ -40,7 +40,7 @@ module Admin
 
     def destroy
       @test.destroy
-      redirect_to tests_path
+      redirect_to admin_tests_path
     end
 
     private
@@ -53,4 +53,4 @@ module Admin
       @test = Test.find(params[:id])
     end
   end
-end
+
