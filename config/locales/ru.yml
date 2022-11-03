@@ -8,11 +8,9 @@ ru:
       test:
         create:  "Создать тест"
         update:  "Обновить тест"
-    label:
-      test:
-        title: "Название теста"
-        level: "Уровень сложности"
-        category_id: "Категория"
+      user:
+        create:  "Зарегистрироваться"
+
 
   shared:
     errors:
@@ -36,3 +34,11 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
+
+  menu:
+    home: "Главная"
+    tests: "Тесты"
+    logout: "Выйти"
+    signup: "Регистрация"
+    login: "Вход"
+

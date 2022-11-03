@@ -39,11 +39,9 @@ en:
       test:
         create:  "Create test"
         update:  "Update test"
-    label:
-      test:
-        title: "Title"
-        level: "Level"
-        category_id: "Category"
+      user:
+        create:  "Sign Up"
+
 
   shared:
     errors:
@@ -65,3 +63,10 @@ en:
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
+
+  menu:
+    home: "TestGuru"
+    tests: "Tests"
+    logout: "Log Out"
+    signup: "Sign Up"
+    login: "Log In"
