@@ -38,3 +38,4 @@ ru:
     errors:
       messages:
         blank: "не может быть пустым"
+    
