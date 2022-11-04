@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
 
   def default_url_options
     return {} if I18n.locale == I18n.default_locale
+
     { lang: I18n.locale }
   end
 
