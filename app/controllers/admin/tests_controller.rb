@@ -31,7 +31,7 @@
 
     def update
       if @test.update(test_params)
-        redirect_to tests_path
+        redirect_to admin_tests_path
 
       else
         render :edit

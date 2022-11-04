@@ -12,6 +12,7 @@ ru:
         create:  "Зарегистрироваться"
 
 
+
   shared:
     errors:
       header: 
@@ -23,13 +24,60 @@ ru:
   admin:
     tests:
       index:
-        header: "Доступные для прохождения тесты"
+        header: "Доступные для редактирования тесты"
+        new_test: "Создать новый тест"
+        tests: "Тесты"
+        level: "Уровень"
+        actions: "Действия"
+        notests: "Тесты отсутствуют"
+      edit:
+        title: "Редактировать тест: %{test}"
+      new:
+        title: "Создание теста"
+      show:
+        title: "Тест: %{test}"
+        level: "Уровень: %{test}"
+        newq: "Добавить вопрос"
+        list: "Список вопросов"
+        qs: "Вопросы"
+        actions: "Действия"
+        noq: "Нет вопросов к данному тесту"
       create:
         success: "Тест был успешно создан"
+    questions:
+      show:
+        test: "Тест: %{title}"
+        answers: "Вопросы"
+        addanswer: "Добавить ответ"
+    answers:
+      new:
+        title: "Новый ответ"
+      show:
+        title: "Ответ на вопрос"
+        question: "Вопрос: "
+        answer: "Ответ: "
+        correct: " Правильность: "
+  tests:
+    index:
+      header: "Доступные для прохождения тесты"
+      tests: "Тесты"
+      level: "Уровень"
+      actions: "Действия"
+      notests: "Тесты отсутствуют"
+    test:
+      start: "Пройти"
 
   test_passages:
     result:
       header: "Тест %{title} успешно завершён!"
+      success: "Вы успешно прошли тест. Ваш результат: %{result}%"
+      fail: "Вы не прошли тест. Ваш результат: %{result}%"
+      alltests: "Все тесты"
+    show:
+      title: "Прохождение теста %{test}"
+      question: "Вопрос"
+      next: "Следующий"
+
 
   tests_mailer:
     completed_test:
@@ -41,4 +89,12 @@ ru:
     logout: "Выйти"
     signup: "Регистрация"
     login: "Вход"
+
+  global:
+    back: "Назад"
+    show: "Показать"
+    edit: "Редактировать"
+    delete: "Удалить"
+    confirm: "Вы уверены?"
+
 

@@ -1,5 +1,5 @@
-<h1>Редактировать тест: <%= @test.title %></h1>
+<h1><%= t('.title', test: @test.title) %></h1>
 
-<%= render 'form' %>
+<%= render 'form' %><br>
 
-<%= link_to "Back", admin_tests_path %>
+<%= link_to t('global.back'), admin_tests_path %><br>

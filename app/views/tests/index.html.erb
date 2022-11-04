@@ -3,12 +3,12 @@
   <h2><%= t('.header') %></h2>
     <table>
       <tr>
-        <th>Тесты</th>
-        <th>Уровень</th>
-        <th>Actions</th>
+        <th><%= t('.tests') %></th>
+        <th><%= t('.level') %></th>
+        <th><%= t('.actions') %></th>
       </tr>
       <%= render @tests %>
     </table>
 <% else %>
-  <p>Тесты отсуствуют</p>
+  <p><%= t('.notests') %></p>
 <% end %>

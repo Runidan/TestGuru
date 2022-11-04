@@ -2,9 +2,9 @@
 
 <div class="result">
   <% if @test_passage.successful? %>
-    <p class="succes">You have successfully passed the test. Your result <%= @test_passage.success_rate %>%</p>
+    <p class="succes"><%= t('.success', result: @test_passage.success_rate) %></p>
   <% else %>
-    <p class="fail">You didn't pass the test. Your result <%= @test_passage.success_rate %>%</p>
+    <p class="fail"><%= t('.fail', result: @test_passage.success_rate) %></p>
   <% end %>
 </div>
-<p><%= link_to "All test", tests_path %></p>
+<p><%= link_to t('.alltests'), tests_path %></p>

@@ -11,7 +11,7 @@ ru:
       test:
         title: "Название"
         level: "Уровень сложности"
-        category: "Категория"
+        category_id: "Категория"
         author: "Автор"
       question:
         body: "Текст вопроса"
