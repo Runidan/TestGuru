@@ -84,7 +84,7 @@ ru:
       subject: "Вы успешно завершили тест на TestGuru!"
 
   menu:
-    home: "Главная"
+    home: "TestGuru"
     tests: "Тесты"
     logout: "Выйти"
     signup: "Регистрация"
