@@ -10,6 +10,7 @@ module ApplicationHelper
   end
 
   def flash_message(type)
-    content_tag :div, flash[type], class: "flash #{type}" if flash[type]
+    style_alert = type == "notice" ? "alert alert-success" : "alert alert-danger" 
+    content_tag :div, flash[type], class: style_alert, role: "alert" if flash[type]
   end
 end

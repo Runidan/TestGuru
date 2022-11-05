@@ -4,7 +4,7 @@
       <%= link_to t('menu.home'), root_path, class: 'navbar-brand' %>
       <span class="navbar-text">
         <% if user_signed_in? %>
-          <b> Welcome, <%= current_user.first_name %> Guru</b> |
+          <b> Welcome, <%= current_user.login %> Guru</b> |
           <%= link_to t('menu.logout'), destroy_user_session_path, method: :delete, class: 'text-decoration-none' %>
             
           <% else %>
