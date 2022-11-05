@@ -24,8 +24,15 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+#Auth
 gem 'devise', '~> 4.0'
+
+#Localization
 gem 'rails-i18n', '~> 6'
+
+#UI
+gem 'jquery-rails'
+gem 'bootstrap', '~> 5.2.2'
 
 gem 'net-imap'
 gem 'net-pop'
