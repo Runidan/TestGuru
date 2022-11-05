@@ -4,14 +4,15 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   protect_from_forgery with: :exception
 
-  # helper_method :after_login
+  before_action :set_locale
+
+  def default_url_options
+    return {} if I18n.locale == I18n.default_locale
+
+    { lang: I18n.locale }
+  end
 
   private
-
-  # def after_login(user)
-  #   session[:user_id] = user.id
-  #   redirect_to cookies.delete(:request_url) || root_path, notice: "Welcome, #{current_user.first_name} Guru"
-  # end
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[login first_name last_name])
@@ -25,5 +26,9 @@ class ApplicationController < ActionController::Base
       flash[:notice] = "Welcome, #{current_user.first_name} Guru"
       stored_location_for(resource) || root_path
     end
+  end
+
+  def set_locale
+    I18n.locale = I18n.locale_available?(params[:lang]) ? params[:lang] : I18n.default_locale
   end
 end

@@ -1,0 +1,41 @@
+ru:
+  activerecord:
+    models:
+      test: "Тест"
+      question: "Вопрос"
+      answer: "Ответ"
+      user: "Пользователь"
+      admin: "Администратор"
+    
+    attributes:
+      test:
+        title: "Название"
+        level: "Уровень сложности"
+        category_id: "Категория"
+        author: "Автор"
+      question:
+        body: "Текст вопроса"
+      answer:
+        body: "Текст ответа"
+        correct: "Отметка о правильности"
+      user:
+        login: "Логин"
+        email: "Электронная почта"
+        first_name: "Имя"
+        last_name: "Фамилия"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+      admin:
+        login: "Логин"
+        email: "Электронная почта"
+        first_name: "Имя"
+        last_name: "Фамилия"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+
+
+
+    errors:
+      messages:
+        blank: "не может быть пустым"
+    

@@ -30,4 +30,98 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  tests:
+    index:
+      header: "Tricky Tests"
+
+  helpers:
+    submit:
+      test:
+        create:  "Create test"
+        update:  "Update test"
+      user:
+        create:  "Sign Up"
+
+  shared:
+    errors:
+      header: 
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+  
+  admin:
+    tests:
+      index:
+        header: "Tricky Tests"
+        new_test: "Create New test"
+        tests: "Tests"
+        level: "Level"
+        actions: "Actions"
+        notests: "There is no tests"
+      edit:
+        title: "Edit test: %{test}"
+      new:
+        title: "Создание теста"
+      show:
+        title: "Test: %{test}"
+        level: "Level: %{test}"
+        newq: "Add question"
+        list: "Questions list"
+        qs: "Questions"
+        actions: "Actions"
+        noq: "Question is not exist"
+      create:
+        success: "Test was successfully created!"
+    questions:
+      show:
+        test: "Test %{title}"
+        answers: "Answers"
+        addanswer: "Add answer"
+    answers:
+      new:
+        title: "New answer"
+      show:
+        title: "Answer for question"
+        question: "Question: "
+        answer: "Answer: "
+        correct: "Correct: "
+
+  tests:
+    index:
+      header: "Tricky Tests"
+      tests: "Tests"
+      level: "Level"
+      actions: "Actions"
+      notests: "There is no tests"
+    test:
+      start: "Start"
+
+  test_passages:
+    result:
+      header: "The %{title} test was completed!!"
+      success: "You have successfully passed the test. Your result %{result}%"
+      fail: "You didn't pass the test. Your result %{result}%"
+      alltests: "All tests"
+    show:
+      title: "Passing the %{test}  Test"
+      question: "Question"
+      next: "Next"
+
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"
+
+  menu:
+    home: "TestGuru"
+    tests: "Tests"
+    logout: "Log Out"
+    signup: "Sign Up"
+    login: "Log In"
+
+  global:
+    back: "Back"
+    show: "Show"
+    edit: "Edit"
+    delete: "Delete"
+    confirm: "Are you sure?"
+    
