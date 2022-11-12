@@ -34,6 +34,9 @@ gem 'rails-i18n', '~> 6'
 gem 'bootstrap', '~> 5.2.2'
 gem 'jquery-rails'
 
+#NETWORKING
+gem 'faraday'
+
 gem 'net-imap'
 gem 'net-pop'
 gem 'net-smtp'

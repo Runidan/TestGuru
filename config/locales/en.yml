@@ -105,6 +105,10 @@ en:
       title: "Passing the %{test}  Test"
       question: "Question"
       next: "Next"
+    gist:
+      success: "Gist was successfully created!"
+      failure: "An error occured while saving gist"
+
 
 
   tests_mailer:
