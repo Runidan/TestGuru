@@ -111,6 +111,10 @@ en:
     completed_test:
       subject: "You just completed the TestGuru test!"
 
+  services:
+    gist_question_service:
+      description: "A question about %{title} from TestGuru"
+
   menu:
     home: "TestGuru"
     tests: "Tests"
