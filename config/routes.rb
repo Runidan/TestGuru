@@ -13,7 +13,10 @@ Rails.application.routes.draw do
   resources :test_passages, only: %i[show update] do
     member do
       get :result
+<<<<<<< HEAD
       resources :gists, only: :create
+=======
+>>>>>>> 25a9245d346024f5dd654011308e691d7c23c1ef
     end
   end
 
