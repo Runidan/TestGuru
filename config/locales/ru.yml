@@ -84,15 +84,12 @@ ru:
       title: "Прохождение теста %{test}"
       question: "Вопрос"
       next: "Следующий"
-<<<<<<< HEAD
 
   gists:
     create:
       success: "Гист успешно создан по адресу: %{gist_url}"
       failure: "Не удалось создать гист"
 
-=======
->>>>>>> 25a9245d346024f5dd654011308e691d7c23c1ef
 
 
   tests_mailer:
