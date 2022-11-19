@@ -89,6 +89,7 @@ ru:
   services:
     gist_question_service:
       description: "Вопрос о %{title} с приложения TestGuru"
+      title: "Question from test %{title}"
 
   menu:
     home: "TestGuru"
