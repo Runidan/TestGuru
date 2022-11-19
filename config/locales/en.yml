@@ -49,6 +49,13 @@ en:
         other: "%{count} errors detected"
   
   admin:
+    gists:
+      index:
+        header: "Gist list"
+        notests: "There are no gists"
+        questions: "Questions"
+        gist_url: "Gist URL"
+        user: "User" 
     tests:
       index:
         header: "Tricky Tests"
@@ -105,8 +112,10 @@ en:
       title: "Passing the %{test}  Test"
       question: "Question"
       next: "Next"
-    gist:
-      success: "Gist was successfully created!"
+
+  gists:
+    create:
+      success: "Gist was successfully created: %{gist_url}"
       failure: "An error occured while saving gist"
 
 
