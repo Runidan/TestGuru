@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 class GistsController < ApplicationController
   before_action :set_test_passage
@@ -7,12 +8,12 @@ class GistsController < ApplicationController
     @result = GistQuestionService.new(@current_question).call
 
     flash_options = if @result.nil?
-      { alert: t('.failure') }
-    else
-      Gist.create!(gist_params)
-      { notice: t('.success', gist_url: @result.url) } 
-    end
-    
+                      { alert: t('.failure') }
+                    else
+                      Gist.create!(gist_params)
+                      { notice: t('.success', gist_url: @result.url) }
+                    end
+
     redirect_to @test_passage, flash_options
   end
 

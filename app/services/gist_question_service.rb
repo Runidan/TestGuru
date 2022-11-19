@@ -1,5 +1,6 @@
-class GistQuestionService
+# frozen_string_literal: true
 
+class GistQuestionService
   def initialize(question, client: nil)
     @question = question
     @test = @question.test
@@ -14,7 +15,7 @@ class GistQuestionService
 
   def gist_params
     {
-      description:  I18n.t('services.gist_question_service.description', title: @test.title),
+      description: I18n.t('services.gist_question_service.description', title: @test.title),
       files: {
         "#{I18n.t('services.gist_question_service.title', title: @test.title)}.txt" => {
           content: gist_content
