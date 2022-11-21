@@ -34,16 +34,9 @@ gem 'rails-i18n', '~> 6'
 gem 'bootstrap', '~> 5.2.2'
 gem 'jquery-rails'
 
-<<<<<<< HEAD
-#NETWORKING
-gem 'faraday'
-gem 'faraday-retry'
-
-#GitHub_API
+# GitHub_API
 gem "octokit", "~> 5.0"
 
-=======
->>>>>>> parent of 0011718... feat: after video lesson
 gem 'net-imap'
 gem 'net-pop'
 gem 'net-smtp'
