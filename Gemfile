@@ -35,7 +35,7 @@ gem 'bootstrap', '~> 5.2.2'
 gem 'jquery-rails'
 
 # GitHub_API
-gem "octokit", "~> 5.0"
+gem 'octokit', '~> 5.0'
 
 gem 'net-imap'
 gem 'net-pop'
@@ -50,7 +50,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'
-
 end
 
 group :development do
