@@ -272,12 +272,9 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   devise (~> 4.0)
-<<<<<<< HEAD
   dotenv-rails
   faraday
   faraday-retry
-=======
->>>>>>> parent of 0011718... feat: after video lesson
   jbuilder (~> 2.7)
   jquery-rails
   letter_opener
