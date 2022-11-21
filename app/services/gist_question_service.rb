@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 class GistQuestionService
+  GistOnSite = Struct.new('Gist', :url, :name) do
+    def success?
+      url.present? || name.present?
+    end
+  end
+
   def initialize(question, client = default_client)
     @question = question
     @test = @question.test
@@ -8,7 +14,8 @@ class GistQuestionService
   end
 
   def call
-    @client.create_gist(gist_params)
+    answer = @client.create_gist(gist_params)
+    GistOnSite.new(answer.url, answer.id)
   end
 
   private

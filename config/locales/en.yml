@@ -113,8 +113,9 @@ en:
       question: "Question"
       next: "Next"
     gist:
-      success: "Gist was successfully created!"
-      failure: "An error occured while saving gist"
+      create:
+        success: "Gist was successfully created: "
+        failure: "An error occured while saving gist"
 
 
 

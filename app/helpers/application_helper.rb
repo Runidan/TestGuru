@@ -12,6 +12,6 @@ module ApplicationHelper
 
   def flash_message(type)
     style_alert = type == 'notice' ? 'alert alert-success' : 'alert alert-danger'
-    content_tag :div, flash[type], class: style_alert, role: 'alert' if flash[type]
+    content_tag :div, sanitize(flash[type]), class: style_alert, role: 'alert' if flash[type]
   end
 end

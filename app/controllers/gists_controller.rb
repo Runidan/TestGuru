@@ -7,11 +7,11 @@ class GistsController < ApplicationController
     @current_question = @test_passage.current_question
     @result = GistQuestionService.new(@current_question).call
 
-    flash_options = if @result.nil?
-                      { alert: t('.failure') }
-                    else
+    flash_options = if @result.success?
                       Gist.create!(gist_params)
-                      { notice: t('.success', gist_url: @result.url) }
+                      { notice: t('.success') + " #{view_context.link_to(@result.name, @result.url)}." }
+                    else
+                      { alert: t('.failure') }
                     end
 
     redirect_to @test_passage, flash_options
@@ -24,6 +24,6 @@ class GistsController < ApplicationController
   end
 
   def gist_params
-    { question_id: @current_question.id, user_id: @test_passage.user.id, name: @result.id, url: @result.url }
+    { question: @current_question, user: @test_passage.user, name: @result.name, url: @result.url }
   end
 end
