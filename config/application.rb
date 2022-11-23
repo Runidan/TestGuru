@@ -24,12 +24,9 @@ module TestGuru
 
     config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
     config.i18n.default_locale = :ru
-<<<<<<< HEAD
 
     config.autoload_paths << "#{Rails.root}/lib/clients"
 
     Bundler.require(*Rails.groups)
-=======
->>>>>>> parent of 0011718... feat: after video lesson
   end
 end

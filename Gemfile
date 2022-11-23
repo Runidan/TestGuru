@@ -34,16 +34,9 @@ gem 'rails-i18n', '~> 6'
 gem 'bootstrap', '~> 5.2.2'
 gem 'jquery-rails'
 
-<<<<<<< HEAD
-#NETWORKING
-gem 'faraday'
-gem 'faraday-retry'
+# GitHub_API
+gem 'octokit', '~> 5.0'
 
-#GitHub_API
-gem "octokit", "~> 5.0"
-
-=======
->>>>>>> parent of 0011718... feat: after video lesson
 gem 'net-imap'
 gem 'net-pop'
 gem 'net-smtp'
@@ -57,7 +50,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'
-
 end
 
 group :development do

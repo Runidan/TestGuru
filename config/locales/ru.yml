@@ -22,6 +22,13 @@ ru:
         other: "Обнаружено %{count} ошибки"
 
   admin:
+    gists:
+      index:
+        header: "Список опубликованных гист"
+        notests: "Созданные гист отсуствуют"
+        questions: "Вопрос"
+        gist_url: "Gist URL"
+        user: "Пользователь" 
     tests:
       index:
         header: "Доступные для редактирования тесты"
@@ -78,6 +85,12 @@ ru:
       question: "Вопрос"
       next: "Следующий"
 
+  gists:
+    create:
+      success: "Гист успешно создан по адресу: "
+      failure: "Не удалось создать гист"
+
+
 
   tests_mailer:
     completed_test:
@@ -86,6 +99,7 @@ ru:
   services:
     gist_question_service:
       description: "Вопрос о %{title} с приложения TestGuru"
+      title: "Вопрос из теста: %{title}"
 
   menu:
     home: "TestGuru"

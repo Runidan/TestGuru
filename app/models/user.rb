@@ -12,6 +12,7 @@ class User < ApplicationRecord
          :confirmable
 
   has_many :test_passages, dependent: :destroy
+  has_many :gists, dependent: :destroy
   has_many :tests, through: :test_passages, dependent: :destroy
   has_many :made_tests, class_name: 'Test', foreign_key: :author_id, dependent: :destroy
 

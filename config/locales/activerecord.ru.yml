@@ -6,6 +6,7 @@ ru:
       answer: "Ответ"
       user: "Пользователь"
       admin: "Администратор"
+      gist: "Гист"
     
     attributes:
       test:
@@ -32,6 +33,11 @@ ru:
         last_name: "Фамилия"
         password: "Пароль"
         password_confirmation: "Подтверждение пароля"
+      gist:
+        question: "Вопрос"
+        user: "Пользователь"
+        name: "Название"
+        url: "Ссылка"
 
 
 
