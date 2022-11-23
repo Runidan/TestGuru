@@ -33,6 +33,8 @@ gem 'rails-i18n', '~> 6'
 # UI
 gem 'bootstrap', '~> 5.2.2'
 gem 'jquery-rails'
+gem 'octicons_helper', '~> 17.9'
+
 
 # GitHub_API
 gem 'octokit', '~> 5.0'
