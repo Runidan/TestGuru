@@ -1,44 +1,28 @@
 document.addEventListener('turbolinks:load', () => {
-  const formNewUser = document.getElementById('new_user')
-  const markSuccess = document.getElementById('mark-success')
-  const markBlocked = document.getElementById('mark-blocked')
-
+  let formNewUser = document.getElementById('new_user')
   if (formNewUser) {
     formNewUser.addEventListener('input', checkPassWord)
-  }
+  }})
 
   function checkPassWord() { 
-    const passWord = document.getElementById('user_password').textContent
-    const confirmPassWord = document.getElementById("user_password_confirmation").textContent
+    let confirmPassWordField = document.getElementById('user_password_confirmation')
+    let passWordField = document.getElementById('user_password')
+    let markSuccess = document.getElementById('mark-success')
+    let markBlocked = document.getElementById('mark-blocked')
+
+    let passWord = passWordField.value
+    let confirmPassWord = confirmPassWordField.value
+
 
     if (confirmPassWord) {
-      console.log("first if")
-      if (confirmPassWord == passWord) {
-        showSuccess
-      } else {
-        showBlock
-      }
+      (confirmPassWord == passWord) ? showMark(markSuccess, markBlocked) : showMark(markBlocked, markSuccess)
     } else {
-      hideAll
+      markSuccess.classList.add('hide')
+      markBlocked.classList.add('hide')
     }   
   }
 
-  function showSuccess() {
-    markSuccess.classList.remove('hide')
-    markBlocked.classList.add('hide')
+  function showMark(node1, node2) {
+    node1.classList.remove('hide')
+    node2.classList.add('hide')
   }
-
-  function showBlock() {
-    markSuccess.classList.add('hide')
-    markBlocked.classList.remove('hide')
-  }
-
-  function hideAll() {
-    markSuccess.classList.add('hide')
-    markBlocked.classList.add('hide')
-  }
-})
-
-
-
-
