@@ -1,17 +1,17 @@
 document.addEventListener('turbolinks:load', () => {
-  let formNewUser = document.getElementById('new_user')
+  const formNewUser = document.getElementById('new_user')
   if (formNewUser) {
     formNewUser.addEventListener('input', checkPassWord)
   }})
 
   function checkPassWord() { 
-    let confirmPassWordField = document.getElementById('user_password_confirmation')
-    let passWordField = document.getElementById('user_password')
-    let markSuccess = document.getElementById('mark-success')
-    let markBlocked = document.getElementById('mark-blocked')
+    const confirmPassWordField = document.getElementById('user_password_confirmation')
+    const passWordField = document.getElementById('user_password')
+    const markSuccess = document.getElementById('mark-success')
+    const markBlocked = document.getElementById('mark-blocked')
 
-    let passWord = passWordField.value
-    let confirmPassWord = confirmPassWordField.value
+    const passWord = passWordField.value
+    const confirmPassWord = confirmPassWordField.value
 
 
     if (confirmPassWord) {
