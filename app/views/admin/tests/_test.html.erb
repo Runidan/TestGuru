@@ -1,8 +1,15 @@
 <tr>
-  <td><%= test.title %> (<%= test.questions.count %>)</td>
+  <td>
+    <%= test.title %> (<%= test.questions.count %>)
+    <%= render 'form_inline', test: test %>
+  </td>
   <td class="text-center"><%= test_level(test) %></td>
   <td><%= link_to t('global.show'), admin_test_path(test), class: 'text-decoration-none' %></td>
   <td><%= link_to t('global.edit'), edit_admin_test_path(test), class: 'text-decoration-none' %></td>
   
-  <td><%= link_to t('global.delete'), admin_test_path(test), method: :delete, data: {confirm: t('global.confirm')}, class: 'text-decoration-none' %></td>
+  <td><%= link_to t('global.delete'),
+          admin_test_path(test),
+          method: :delete,
+          data: {confirm: t('global.confirm')},
+          class: 'text-decoration-none' %></td>
 </tr>
