@@ -51,6 +51,8 @@ ru:
         noq: "Нет вопросов к данному тесту"
       create:
         success: "Тест был успешно создан"
+      form_inline:
+        submit: "OK"
     questions:
       show:
         test: "Тест: %{title}"

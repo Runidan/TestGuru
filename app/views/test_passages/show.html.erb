@@ -1,8 +1,16 @@
 <h1><%= t('.title', test: @test_passage.test.title) %></h1>
 
+<div class="progress">
+  <%= content_tag :div, '', 
+                  class: 'progress-bar',
+                  id: "test-progress-bar", 
+                  role: "progressbar", 
+                  data: { question: "#{@test_passage.question_number}", 
+                          questions: "#{@test_passage.test.questions.count}" } %>
+</div>
+
 <b>
-  <%= t('.question') %> <%= @test_passage.question_number %>
-  / <%= @test_passage.test.questions.count %></br></br>
+  <%= t('.question') %> <%= "#{@test_passage.question_number} / #{@test_passage.test.questions.count}" %></br></br>
   <%= @test_passage.current_question.body %>
 </b>
 

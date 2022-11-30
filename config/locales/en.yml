@@ -78,6 +78,8 @@ en:
         noq: "Question is not exist"
       create:
         success: "Test was successfully created!"
+      form_inline:
+        submit: "OK"
     questions:
       show:
         test: "Test %{title}"
@@ -116,8 +118,6 @@ en:
       create:
         success: "Gist was successfully created: "
         failure: "An error occured while saving gist"
-
-
 
   tests_mailer:
     completed_test:
