@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   devise_for :users, path: :gurus, path_names: { sign_in: 'login', sign_out: 'logout' }
 
+  get '/feedback', to: 'statik_pages#show'
+  post '/feedback', to: 'statik_pages#show'
+
   resources :tests, only: :index do
     post :start, on: :member
   end
