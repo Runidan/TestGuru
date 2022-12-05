@@ -93,6 +93,7 @@ ru:
   pages:
     feedback:
       title: "Оставить отзыв"
+      send: "Отправить"
 
 
   tests_mailer:

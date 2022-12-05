@@ -126,6 +126,7 @@ en:
   pages:
     feedback:
       title: "Send feedback"
+      send: "Send"
 
   services:
     gist_question_service:
