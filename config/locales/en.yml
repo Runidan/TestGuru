@@ -127,6 +127,8 @@ en:
     feedback:
       title: "Send feedback"
       send: "Send"
+    send_feedback:
+      success: "Feedback was successfuly sended"
 
   services:
     gist_question_service:

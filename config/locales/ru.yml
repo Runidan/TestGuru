@@ -94,6 +94,8 @@ ru:
     feedback:
       title: "Оставить отзыв"
       send: "Отправить"
+    send_feedback:
+      success: "Отзыв был успешно отправлен"
 
 
   tests_mailer:

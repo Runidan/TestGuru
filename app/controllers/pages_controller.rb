@@ -13,7 +13,7 @@ class PagesController < ApplicationController
     User.where("type='Admin'").find_each do |user|
       FeedbacksMailer.send_feedback(@feedback, user.email).deliver_now
     end
-    redirect_to root_path, notice: 'Отзыв успешно отправлен'
+    redirect_to root_path, notice: t('.success')
   end
 
   def show
