@@ -11,8 +11,6 @@ ru:
       user:
         create:  "Зарегистрироваться"
 
-
-
   shared:
     errors:
       header: 
@@ -92,6 +90,12 @@ ru:
       success: "Гист успешно создан по адресу: "
       failure: "Не удалось создать гист"
 
+  pages:
+    feedback:
+      title: "Оставить отзыв"
+      send: "Отправить"
+    send_feedback:
+      success: "Отзыв был успешно отправлен"
 
 
   tests_mailer:

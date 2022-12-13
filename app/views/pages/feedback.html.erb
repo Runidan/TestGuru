@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col col-md-8">
+    <h2><%= t('.title') %></h2>
+    <%= form_with url: pages_feedback_path, method: :post do |form| %>
+      <%= form.text_field :email, id: :feedback_email, class: "", value: @email, class: 'hide' %></p>
+      <div>
+        <%= form.text_area :text, id: :feedback_text, size: "70x5" %>
+      </div>
+
+      <%= form.submit t('.send'), class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>

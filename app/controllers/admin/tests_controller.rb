@@ -5,8 +5,7 @@
     before_action :set_tests, only: %i[index update_inline]
     before_action :set_test, only: %i[show edit update destroy start update_inline]
 
-    def index
-    end
+    def index; end
 
     def show
       @questions = @test.questions
@@ -52,6 +51,7 @@
     end
 
     private
+
     def set_tests
       @tests = Test.all
     end
@@ -64,4 +64,4 @@
       @test = Test.find(params[:id])
     end
   end
-
+end
