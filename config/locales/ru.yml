@@ -64,6 +64,18 @@ ru:
         question: "Вопрос: "
         answer: "Ответ: "
         correct: " Правильность: "
+    badges:
+      index:
+        header: "Созданные бейджи"
+        badges: "Название бейджа"
+        discription: "Описание"
+        img: "Иконка"
+        no_badges: "Бейджи отсуствуют"
+        actions: "Действия"
+      badge:
+        delete: "Удалить"
+
+    
   tests:
     index:
       header: "Доступные для прохождения тесты"

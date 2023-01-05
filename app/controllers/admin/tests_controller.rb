@@ -64,4 +64,3 @@
       @test = Test.find(params[:id])
     end
   end
-end

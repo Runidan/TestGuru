@@ -1,0 +1,11 @@
+<tr>
+  <td><%= badge.name %></td>
+  <td class="text-center"><%= badge.discription %></td>
+  <td class="text-center" >img</td>
+  <td class="text-center" ><%= button_to t('.delete'),
+                                        admin_badge_path(badge),
+                                        method: :delete, 
+                                        data: {confirm: t('global.confirm')},
+                                        class: 'btn btn-outline-danger btn-sm', 
+                                        type: 'button' %></td>
+</tr>
