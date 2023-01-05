@@ -27,11 +27,11 @@ ActiveRecord::Schema.define(version: 2023_01_05_080616) do
   create_table "badges", force: :cascade do |t|
     t.string "name", limit: 25, null: false
     t.string "image", null: false
-    t.string "type", null: false
+    t.string "badge_type", null: false
     t.string "option", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["type", "option"], name: "index_badges_on_type_and_option", unique: true
+    t.index ["badge_type", "option"], name: "index_badges_on_badge_type_and_option", unique: true
   end
 
   create_table "badges_users", id: false, force: :cascade do |t|

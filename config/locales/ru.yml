@@ -97,6 +97,13 @@ ru:
     send_feedback:
       success: "Отзыв был успешно отправлен"
 
+  badges:
+    index:
+      header: "Полученные бейджи"
+      badges: "Название бейджа"
+      discription: "Описание"
+      img: "Иконка"
+      no_badges: "Бейджи отсуствуют"
 
   tests_mailer:
     completed_test:
