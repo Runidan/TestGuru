@@ -72,6 +72,8 @@ ru:
         img: "Иконка"
         no_badges: "Бейджи отсуствуют"
         actions: "Действия"
+      form:
+        add_badge: "Создать бейдж"
       badge:
         delete: "Удалить"
 
@@ -115,7 +117,7 @@ ru:
       badges: "Название бейджа"
       discription: "Описание"
       img: "Иконка"
-      no_badges: "Бейджи отсуствуют"
+      no_badges: "Нет созданных бейджей"
 
   tests_mailer:
     completed_test:

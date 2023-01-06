@@ -6,4 +6,6 @@ class Category < ApplicationRecord
   validates :title, presence: true
 
   has_many :tests, dependent: :destroy
+
+  belongs_to :badge
 end
