@@ -40,17 +40,13 @@ ru:
         name: "Название"
         url: "Ссылка"
       badge:
+        name: "Название"
+        discription: "Описание"
         badge_type: "Тип бейджа"
-        disc_all_category: "Прошли все тесты в категории: %{category}"
-        disc_on_the_first_try: "Прошел тест с первой попытки"
-        disc_all_test_one_level: "Прошел все тесты %{level} уровня" 
-        no_discription: "Описание отсуствует"
-        name_all_category: "Покоритель категории"
-        name_on_the_first_try: "С первого раза!"
-        name_all_test_one_level: "Мастер тестов %{level} уровня"
-        no_name: "No name"
-
-
+        image: "Иконка бейджа"
+        category: "Категория"
+        test: "Тест"
+        level: "Уровень"
 
     errors:
       messages:

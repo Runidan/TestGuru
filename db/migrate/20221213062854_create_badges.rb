@@ -5,8 +5,7 @@ class CreateBadges < ActiveRecord::Migration[6.1]
       t.string :discription, limit: 240
       t.string :badge_type, null: false
       t.string :image, null: false
-      t.integer :level
-
+      t.integer :value, null: false
 
       t.timestamps
     end

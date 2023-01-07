@@ -4,11 +4,26 @@
       <%= render 'shared/errors', resource: badge %>
         <%= hidden_field(:badge, :badge_type, value: badge.badge_type) %>
         <tr>
-          <td><%= badge.name %></td>
-          <td><%= badge.discription %></td>
           <td>
-                <%= f.label badge.label_option %>:
-                <%= f.collection_select :option, Category.all, :id, :title, prompt: true %>
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+          </td>
+          <td>
+            <%= f.label :discription %>
+            <%= f.text_field :discription %>
+          </td>
+          <td>
+            <% if badge.badge_type == "badge_category" %>
+              <%= f.label :value %>:
+              <%= f.collection_select :value, Category.all, :id, :title, prompt: true %>
+            <% elsif badge.badge_type == "badge_level" %>
+              <%= f.label :value %>:
+              <%= f.collection_select :value, Test.select("level").group("level"), :level, :level, prompt: true %>
+            <% else %>
+              <%= f.label :value %>:
+              <%= f.collection_select :value, Test.all, :id, :title, prompt: true %>             
+            <% end %>
+
           </td>
           <td>
               <%= f.label :image, "URl image" %>
@@ -17,10 +32,7 @@
           <td>
             <%= f.submit t('.add_badge') %>
           </td>
-
         </tr>
-
-
     <% end %>
   <% end %>
 </table>

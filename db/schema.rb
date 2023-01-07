@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_06_201656) do
+ActiveRecord::Schema.define(version: 2022_12_15_153409) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2023_01_06_201656) do
     t.string "discription", limit: 240
     t.string "badge_type", null: false
     t.string "image", null: false
-    t.integer "level"
+    t.integer "value", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -44,8 +44,6 @@ ActiveRecord::Schema.define(version: 2023_01_06_201656) do
     t.string "title", limit: 50, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "badge_id"
-    t.index ["badge_id"], name: "index_categories_on_badge_id"
   end
 
   create_table "gists", force: :cascade do |t|
@@ -86,9 +84,7 @@ ActiveRecord::Schema.define(version: 2023_01_06_201656) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "author_id"
-    t.bigint "badge_id"
     t.index ["author_id"], name: "index_tests_on_author_id"
-    t.index ["badge_id"], name: "index_tests_on_badge_id"
     t.index ["category_id"], name: "index_tests_on_category_id"
     t.index ["title", "level"], name: "index_tests_on_title_and_level", unique: true
   end

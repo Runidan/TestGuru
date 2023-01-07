@@ -7,5 +7,7 @@ class Category < ApplicationRecord
 
   has_many :tests, dependent: :destroy
 
-  belongs_to :badge
+  def this_object
+    self
+  end
 end
