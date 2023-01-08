@@ -29,7 +29,7 @@ class BadgeService
   end
 
   def on_first_try?
-    true
+    TestPassage.where(test: @test, user: @user).count == 1
   end
 
   def all_on_level?
