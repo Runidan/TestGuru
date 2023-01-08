@@ -14,16 +14,15 @@
           </td>
           <td>
             <% if badge.badge_type == "badge_category" %>
-              <%= f.label :value %>:
+              <%= f.label :value, t('.category') %>:
               <%= f.collection_select :value, Category.all, :id, :title, prompt: true %>
             <% elsif badge.badge_type == "badge_level" %>
-              <%= f.label :value %>:
+              <%= f.label :value, t('.level') %>:
               <%= f.collection_select :value, Test.select("level").group("level"), :level, :level, prompt: true %>
             <% else %>
-              <%= f.label :value %>:
+              <%= f.label :value, t('.test') %>:
               <%= f.collection_select :value, Test.all, :id, :title, prompt: true %>             
             <% end %>
-
           </td>
           <td>
               <%= f.label :image, "URl image" %>
