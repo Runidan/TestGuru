@@ -33,6 +33,8 @@ class BadgeService
   end
 
   def all_on_level?
-    true
+    all_test_onlevel = Test.where(level: @test.level).ids
+    passed_test = TestPassage.where(pass: true, user: @user).pluck(:test_id).uniq
+    (all_test_onlevel - passed_test).empty?
   end
 end
