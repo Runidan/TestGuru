@@ -23,7 +23,9 @@ class BadgeService
   end
 
   def all_in_category?
-    true
+    all_test_in_category = @test.category.tests.ids
+    passed_test = TestPassage.where(pass: true, user: @user).pluck(:test_id).uniq
+    (all_test_in_category - passed_test).empty?
   end
 
   def on_first_try?
