@@ -24,7 +24,7 @@ class BadgeService
 
   def all_in_category?
     all_test_in_category = @test.category.tests.ids
-    passed_test = TestPassage.where(pass: true, user: @user).pluck(:test_id).uniq
+    passed_test = TestPassage.ids_passed_test(@user)
     (all_test_in_category - passed_test).empty?
   end
 
@@ -34,7 +34,7 @@ class BadgeService
 
   def all_on_level?
     all_test_onlevel = Test.where(level: @test.level).ids
-    passed_test = TestPassage.where(pass: true, user: @user).pluck(:test_id).uniq
+    passed_test = TestPassage.ids_passed_test(@user)
     (all_test_onlevel - passed_test).empty?
   end
 end
