@@ -7,6 +7,7 @@
           <b> Welcome, <%= current_user.login %> Guru</b> |
           <% if current_user.is_a?(Admin)%>
             <%= link_to "Admin Panel", admin_tests_path, class: 'text-decoration-none' %> |
+            <%= link_to "Badge Panel", admin_badges_path, class: 'text-decoration-none' %> |
           <% end %>
             <%= link_to t('menu.logout'), destroy_user_session_path, method: :delete, class: 'text-decoration-none' %>
           <% else %>
