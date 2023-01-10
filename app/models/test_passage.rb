@@ -8,7 +8,7 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_question
-  scope :ids_passed_test, ->(user) { where(pass: true, user: user).pluck(:test_id).uniq }
+  scope :ids_passed_test, ->(user) { where(pass: true, user:).pluck(:test_id).uniq }
 
   def question_number
     self.test.questions.order(:id).where('id <= ?', current_question.id).count
