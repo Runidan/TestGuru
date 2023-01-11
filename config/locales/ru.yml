@@ -74,9 +74,10 @@ ru:
         actions: "Действия"
       form:
         add_badge: "Создать бейдж"
-        category: "Выберете категорию"
-        level: "Выберете уровень"
-        test: "Выберете тест"
+        choose_type: "Выбрать тип бейджа"
+        category_type: "Все тесты категории: "
+        level_type: "Все тесты уровня: "
+        first_try_type: "Тест с первой пытки: "
       badge:
         delete: "Удалить"
         

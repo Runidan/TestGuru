@@ -1,8 +1,8 @@
 <table  class="table table-hover mt-3 mb-3 table-bordered align-middle">
-  <% @badges_array.each do |badge| %>
-    <%= form_with model: [:admin, badge], local: true do |f| %>
-      <%= render 'shared/errors', resource: badge %>
-        <%= hidden_field(:badge, :badge_type, value: badge.badge_type) %>
+
+    <%= form_with model: [:admin, @badge], local: true do |f| %>
+      <%= render 'shared/errors', resource: @badge %>
+        
         <tr>
           <td>
             <%= f.label :name %>
@@ -13,16 +13,15 @@
             <%= f.text_field :discription %>
           </td>
           <td>
-            <% if badge.badge_type == "badge_category" %>
-              <%= f.label :value, t('.category') %>:
-              <%= f.collection_select :value, Category.all, :id, :title, prompt: true %>
-            <% elsif badge.badge_type == "badge_level" %>
-              <%= f.label :value, t('.level') %>:
-              <%= f.collection_select :value, Test.select("level").group("level"), :level, :level, prompt: true %>
-            <% else %>
-              <%= f.label :value, t('.test') %>:
-              <%= f.collection_select :value, Test.all, :id, :title, prompt: true %>             
-            <% end %>
+            <%= f.label :badge_type, t('.choose_type') %>
+            <%= f.select :badge_type, 
+                [[t('.category_type'), 'badge_category'], 
+                [t('.level_type'), 'badge_level'], 
+                [t('.first_try_type'), 'badge_first_try']] %>    
+          </td>
+          <td>
+              <%= f.label :value, "Значение" %>
+              <%= f.text_field :value %>
           </td>
           <td>
               <%= f.label :image, "URl image" %>
@@ -33,5 +32,5 @@
           </td>
         </tr>
     <% end %>
-  <% end %>
+
 </table>

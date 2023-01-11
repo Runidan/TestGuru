@@ -5,11 +5,8 @@ class Admin::BadgesController < Admin::BaseController
   before_action :set_badge, only: :destroy
 
   def index
+    @badge = Badge.new()
     @badges = Badge.all
-    @badge_category = Badge.new(badge_type: 'badge_category')
-    @badge_first_try = Badge.new(badge_type: 'badge_first_try')
-    @badge_level = Badge.new(badge_type: 'badge_level')
-    @badges_array = [@badge_category, @badge_first_try, @badge_level]
   end
 
   def create

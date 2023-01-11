@@ -93,6 +93,13 @@ en:
         question: "Question: "
         answer: "Answer: "
         correct: "Correct: "
+    badges:
+      form:
+        add_badge: "Create badge"
+        choose_type: "Choose badge type"
+        category_type: "All in category: "
+        level_type: "All on level: "
+        first_try_type: "Test by first try: "
 
   tests:
     index:
