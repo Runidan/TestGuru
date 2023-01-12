@@ -5,7 +5,7 @@ class Admin::BadgesController < Admin::BaseController
   before_action :set_badge, only: :destroy
 
   def index
-    @badge = Badge.new()
+    @badge = Badge.new
     @badges = Badge.all
   end
 
