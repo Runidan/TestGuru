@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-
 class Admin::BadgesController < Admin::BaseController
   before_action :set_badge, only: :destroy
 
