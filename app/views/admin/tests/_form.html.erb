@@ -13,6 +13,6 @@
     <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
   </p>
   
-  <%= hidden_field(:test, :author_id, value: 1)%>
+  <%= hidden_field(:test, :author_id, value: current_user.id) %>
   <%= form.submit %>
 <% end %>

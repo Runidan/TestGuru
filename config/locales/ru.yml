@@ -64,6 +64,25 @@ ru:
         question: "Вопрос: "
         answer: "Ответ: "
         correct: " Правильность: "
+    badges:
+      index:
+        header: "Созданные бейджи"
+        badges: "Название бейджа"
+        discription: "Описание"
+        img: "Иконка"
+        no_badges: "Бейджи отсуствуют"
+        actions: "Действия"
+      form:
+        add_badge: "Создать бейдж"
+        choose_type: "Выбрать тип бейджа"
+        category_type: "Все тесты категории: "
+        level_type: "Все тесты уровня: "
+        first_try_type: "Тест с первой пытки: "
+      badge:
+        delete: "Удалить"
+        
+
+    
   tests:
     index:
       header: "Доступные для прохождения тесты"
@@ -97,6 +116,13 @@ ru:
     send_feedback:
       success: "Отзыв был успешно отправлен"
 
+  badges:
+    index:
+      header: "Полученные бейджи"
+      badges: "Название бейджа"
+      discription: "Описание"
+      img: "Иконка"
+      no_badges: "Нет созданных бейджей"
 
   tests_mailer:
     completed_test:

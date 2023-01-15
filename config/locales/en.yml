@@ -93,6 +93,13 @@ en:
         question: "Question: "
         answer: "Answer: "
         correct: "Correct: "
+    badges:
+      form:
+        add_badge: "Create badge"
+        choose_type: "Choose badge type"
+        category_type: "All in category: "
+        level_type: "All on level: "
+        first_try_type: "Test by first try: "
 
   tests:
     index:
@@ -129,6 +136,14 @@ en:
       send: "Send"
     send_feedback:
       success: "Feedback was successfuly sended"
+
+  badges:
+    index:
+      header: "User badges"
+      badges: "Badge name"
+      discription: "Discription"
+      img: "Image"
+      no_badges: "You have no bages"
 
   services:
     gist_question_service:

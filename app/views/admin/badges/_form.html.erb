@@ -1,0 +1,36 @@
+<table  class="table table-hover mt-3 mb-3 table-bordered align-middle">
+
+    <%= form_with model: [:admin, @badge], local: true do |f| %>
+      <%= render 'shared/errors', resource: @badge %>
+        
+        <tr>
+          <td>
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+          </td>
+          <td>
+            <%= f.label :discription %>
+            <%= f.text_field :discription %>
+          </td>
+          <td>
+            <%= f.label :badge_type, t('.choose_type') %>
+            <%= f.select :badge_type, 
+                [[t('.category_type'), 'badge_category'], 
+                [t('.level_type'), 'badge_level'], 
+                [t('.first_try_type'), 'badge_first_try']] %>    
+          </td>
+          <td>
+              <%= f.label :value, "Значение" %>
+              <%= f.text_field :value %>
+          </td>
+          <td>
+              <%= f.label :image, "URl image" %>
+              <%= f.text_field :image %>
+          </td>
+          <td>
+            <%= f.submit t('.add_badge') %>
+          </td>
+        </tr>
+    <% end %>
+
+</table>

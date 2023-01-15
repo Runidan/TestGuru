@@ -7,6 +7,7 @@ ru:
       user: "Пользователь"
       admin: "Администратор"
       gist: "Гист"
+      badge: "Бейдж"
     
     attributes:
       test:
@@ -38,8 +39,14 @@ ru:
         user: "Пользователь"
         name: "Название"
         url: "Ссылка"
-
-
+      badge:
+        name: "Название"
+        discription: "Описание"
+        badge_type: "Тип бейджа"
+        image: "Иконка бейджа"
+        category: "Категория"
+        test: "Тест"
+        level: "Уровень"
 
     errors:
       messages:
