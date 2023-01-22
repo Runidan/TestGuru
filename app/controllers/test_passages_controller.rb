@@ -16,6 +16,8 @@ class TestPassagesController < ApplicationController
       BadgeService.new(@test_passage).check_badges
       TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
+    elsif @test_passage.left_time <= 0
+      redirect_to result_test_passage_path(@test_passage)
     else
       render :show
     end

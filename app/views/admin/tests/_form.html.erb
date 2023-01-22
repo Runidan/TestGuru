@@ -12,6 +12,11 @@
     <%= form.label :category_id %>:
     <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
   </p>
+
+  <p>
+    <%= form.label :minutes_for_pass %>:
+    <%= form.number_field :minutes_for_pass, id: :minutes_for_pass, min: 1, step: 1 %>
+  </p>
   
   <%= hidden_field(:test, :author_id, value: current_user.id) %>
   <%= form.submit %>

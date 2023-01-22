@@ -121,6 +121,7 @@ en:
       title: "Passing the %{test}  Test"
       question: "Question"
       next: "Next"
+      time_over: "Test time is over!"
     gist:
       create:
         success: "Gist was successfully created: "

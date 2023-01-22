@@ -30,6 +30,10 @@ class TestPassage < ApplicationRecord
     save!
   end
 
+  def left_time
+    self.created_at + self.test.minutes_for_pass * 60 - Time.current if self.test.minutes_for_pass
+  end
+
   private
 
   def question_number_in_test

@@ -15,6 +15,7 @@ ru:
         level: "Уровень сложности"
         category_id: "Категория"
         author: "Автор"
+        minutes_for_pass: "Минут на прохождение"
       question:
         body: "Текст вопроса"
       answer:

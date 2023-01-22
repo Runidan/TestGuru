@@ -9,6 +9,12 @@
                           questions: "#{@test_passage.test.questions.count}" } %>
 </div>
 
+<%= content_tag :div, @test_passage.left_time,
+                class: 'time_left mt-2',
+                id: 'timer',
+                data: { lefttime: "#{@test_passage.left_time.round}" }
+                        timeover: "#{t('.time_over')}" %>
+
 <b>
   <%= t('.question') %> <%= "#{@test_passage.question_number} / #{@test_passage.test.questions.count}" %></br></br>
   <%= @test_passage.current_question.body %>
