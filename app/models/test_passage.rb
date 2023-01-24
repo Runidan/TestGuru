@@ -22,7 +22,7 @@ class TestPassage < ApplicationRecord
   end
 
   def completed?
-    current_question.nil?
+    current_question.nil? || left_time <= 0
   end
 
   def accept!(answer_ids)

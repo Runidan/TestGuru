@@ -11,7 +11,7 @@ class Test < ApplicationRecord
   validates :title, presence: true
   validates :level, numericality: { only_integer: true, greater_than: 0 }
   validates :title, uniqueness: { scope: :level }
-  validates :minutes_for_pass, numericality: { only_integer: true, greater_than: 1 }
+  validates :minutes_for_pass, numericality: { only_integer: true, greater_than: 1 }, allow_nil: true
 
   scope :simple_lvl, -> { where(level: 0..1) }
   scope :middle_lvl, -> { where(level: 2..4) }

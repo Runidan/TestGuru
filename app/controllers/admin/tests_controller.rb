@@ -56,7 +56,7 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def test_params
-    params.require(:test).permit(:title, :level, :category_id, :author_id, :minutes_for_pass)
+    params.require(:test).permit(:title, :level, :category_id, :minutes_for_pass)
   end
 
   def set_test

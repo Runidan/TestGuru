@@ -18,6 +18,5 @@
     <%= form.number_field :minutes_for_pass, id: :minutes_for_pass, min: 1, step: 1 %>
   </p>
   
-  <%= hidden_field(:test, :author_id, value: current_user.id) %>
   <%= form.submit %>
 <% end %>
