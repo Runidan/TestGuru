@@ -71,6 +71,7 @@ en:
       show:
         title: "Test: %{test}"
         level: "Level: %{test}"
+        time_for_pass: "Minutes for pass: %{minutes}"
         newq: "Add question"
         list: "Questions list"
         qs: "Questions"
