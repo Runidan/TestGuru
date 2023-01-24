@@ -1,5 +1,6 @@
 <h1><%= t('.title', test: @test.title) %></h1>
 <p><%= t('.level', test: @test.level) %></p>
+<p><%= t('.time_for_pass', minutes: @test.minutes_for_pass) %></p>
 
 <%= link_to t('.newq'), new_admin_test_question_path(@test) %> | 
 <%= link_to t('global.edit'), edit_admin_test_path(@test) %> | 
