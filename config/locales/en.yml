@@ -71,6 +71,7 @@ en:
       show:
         title: "Test: %{test}"
         level: "Level: %{test}"
+        time_for_pass: "Minutes for pass: %{minutes}"
         newq: "Add question"
         list: "Questions list"
         qs: "Questions"
@@ -121,6 +122,7 @@ en:
       title: "Passing the %{test}  Test"
       question: "Question"
       next: "Next"
+      time_over: "Test time is over!"
     gist:
       create:
         success: "Gist was successfully created: "

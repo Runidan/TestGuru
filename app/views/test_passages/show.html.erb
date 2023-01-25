@@ -9,12 +9,18 @@
                           questions: "#{@test_passage.test.questions.count}" } %>
 </div>
 
+<%= content_tag :div, '',
+                class: 'time_left mt-2',
+                id: 'timer',
+                data: { lefttime: "#{@test_passage.left_time.round}", 
+                        timeover: "#{t('.time_over')}" } %>
+
 <b>
   <%= t('.question') %> <%= "#{@test_passage.question_number} / #{@test_passage.test.questions.count}" %></br></br>
   <%= @test_passage.current_question.body %>
 </b>
 
-<%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
+<%= form_with url: test_passage_path(@test_passage), local: true, method: :put, id: 'test_passage_form' do |form| %>
   <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b|%>
     <p>
       <%= b.check_box id: "answer_ids_#{b.object.id}" %>
@@ -23,5 +29,5 @@
   <% end %>
 
   <p><%= link_to 'Gist Question', gists_path(@test_passage), method: :post %></p>
-  <p><%= form.submit t('.next') %></p>
+  <p><%= form.submit t('.next'), id: 'submit_question' %></p>
 <% end %>

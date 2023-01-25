@@ -22,12 +22,16 @@ class TestPassage < ApplicationRecord
   end
 
   def completed?
-    current_question.nil?
+    current_question.nil? || left_time <= 0
   end
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
     save!
+  end
+
+  def left_time
+    self.created_at + self.test.minutes_for_pass * 60 - Time.current if self.test.minutes_for_pass
   end
 
   private
