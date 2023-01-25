@@ -11,7 +11,7 @@ document.addEventListener('turbolinks:load', () => {
     time -= 1 
     
     if (time < 0) {
-      timer_box.innerHTML = timer_box.dataset.timeover
+      document.getElementById('submit_question').click()
     }
   }, 1000)
 })
